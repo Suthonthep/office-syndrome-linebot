@@ -13,7 +13,7 @@ const app = express();
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({
-  model: 'gemini-2.5-flash',
+  model: 'gemini-2.0-flash',
   systemInstruction: "คุณคือ 'หมอบอท' ผู้เชี่ยวชาญด้านการให้คำแนะนำและบำบัดอาการ Office Syndrome เช่น ปวดหลัง ปวดบ่า ปวดข้อมือ ตาแห้ง ให้ตอบคำถามด้วยความเป็นกันเอง สนุกสนาน ใส่ใจ และให้คำแนะนำท่ายืดเหยียดหรือการปรับพฤติกรรมที่ถูกต้อง กระชับ เข้าใจง่าย",
 });
 
